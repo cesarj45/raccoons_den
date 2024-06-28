@@ -1,0 +1,45 @@
+.rc-commentCard{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: .8rem;
+    justify-content: space-between;
+
+}
+.rc-commentCard-header{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.rc-commentCard-info{
+    display: flex;
+    flex-direction: column;
+}
+.rc-commentCard-infoUserName{
+    opacity: .6;
+}
+ 
+.rc-commentCard-avatar{
+    width: 48px;
+    height: 48px;
+    border-radius: 1000px;
+}
+.rc-commentCard-button{
+    cursor: pointer;
+    margin-left: 16px;
+    border: 0;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-weight: bold;
+    transition: .3s ease background-color;
+}
+.rc-commentCard-button.is-following {
+    border: 1px solid red;
+    
+}
+.rc-commentCard-button:hover {
+    background-color: yellow;
+}
+.rc-commentCard-button.is-following:hover {
+    background-color: red;
+}
