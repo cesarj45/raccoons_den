@@ -21,7 +21,7 @@ public class Publicacion {
     @OneToMany
     private List<Comentario> comentarios = new ArrayList<>();
     @OneToMany
-    private List<Like> likes = new ArrayList<>();
+    private List<MeGusta> meGustas = new ArrayList<>();
 
     public Publicacion() {}
 
@@ -73,11 +73,11 @@ public class Publicacion {
         this.comentarios = comentarios;
     }
 
-    public List<Like> getLikes() {
-        return likes;
+    public List<MeGusta> getLikes() {
+        return meGustas;
     }
 
-    public void setLikes(List<Like> likes) {
-        this.likes = likes;
+    public void setLikes(List<MeGusta> meGustas) {
+        this.meGustas = meGustas;
     }
 }

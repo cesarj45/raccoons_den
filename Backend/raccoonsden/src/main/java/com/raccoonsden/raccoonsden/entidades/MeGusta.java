@@ -3,17 +3,22 @@ package com.raccoonsden.raccoonsden.entidades;
 import jakarta.persistence.*;
 
 @Entity
-public class Like {
+public class MeGusta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @ManyToOne
+    @JoinColumn(name = "usuario_id")
     private Usuario usuario;
+
     @ManyToOne
+    @JoinColumn(name = "publicacion_id")
     private Publicacion publicacion;
 
-    protected boolean like;
-    public Like() {}
+    private boolean isLiked;
+
+    public MeGusta() {}
 
     public Long getId() {
         return id;
@@ -39,11 +44,11 @@ public class Like {
         this.publicacion = publicacion;
     }
 
-    public boolean isLike() {
-        return like;
+    public boolean isLiked() {
+        return isLiked;
     }
 
-    public void setLike(boolean like) {
-        this.like = like;
+    public void setLiked(boolean isLiked) {
+        this.isLiked = isLiked;
     }
 }
