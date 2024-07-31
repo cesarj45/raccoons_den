@@ -1,9 +1,7 @@
 package com.raccoonsden.raccoonsden.entidades;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import com.raccoonsden.raccoonsden.enumeraciones.TipoUser;
+import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -16,15 +14,16 @@ public class Usuario {
     private String nombre;
     private String email;
     private String password;
-    private String tipo;
+    @Enumerated(EnumType.STRING)
+    private TipoUser tipo;
 
     public Usuario(){}
 
-    public String getTipo() {
+    public TipoUser getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(TipoUser tipo) {
         this.tipo = tipo;
     }
 
